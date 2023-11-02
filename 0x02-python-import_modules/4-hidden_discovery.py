@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    key_list = dir("hidden_4.pyc")
+    import hidden_4
+    key_list = dir(hidden_4)
     for i in key_list:
-        if i.startswith("__"):
-            continue
-        print(i)
+        if not i.startswith("__"):
+            print(i)
