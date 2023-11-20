@@ -3,6 +3,10 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <float.h>
+#include <object.h>
+#include <listobject.h>
+#include <bytesobject.h>
+#include <floatobject.h>
 
 /**
  * print_python_list - python lists info
