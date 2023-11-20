@@ -16,7 +16,7 @@ void print_python_list(PyObject *p)
 	PyVarObject *var = (PyVarObject *)p;
 
 	size = var->ob_size;
-	allocation = list->allocated;
+	allocation = the_list->allocated;
 	fflush(stdout);
 	printf("[*] Python list info\n");
 	if (strcmp(p->ob_type->tp_name, "list") != 0)
