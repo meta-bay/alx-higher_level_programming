@@ -1,13 +1,10 @@
 #include <Python.h>
 
-void print_python_list(PyObject *p);
-void print_python_bytes(PyObject *p);
-void print_python_float(PyObject *p);
-
 /**
  * print_python_list - python list info
  * @p: the pyobject
  */
+
 void print_python_list(PyObject *p)
 {
 	Py_ssize_t size, alloc, i;
