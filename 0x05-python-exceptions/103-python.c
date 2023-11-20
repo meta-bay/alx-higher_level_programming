@@ -19,7 +19,6 @@ void print_python_list(PyObject *p)
 	alloc = list->allocated;
 
 	fflush(stdout);
-
 	printf("[*] Python list info\n");
 	if (strcmp(p->ob_type->tp_name, "list") != 0)
 	{
