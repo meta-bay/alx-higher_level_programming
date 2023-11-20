@@ -8,6 +8,10 @@
 #include <bytesobject.h>
 #include <floatobject.h>
 
+void print_python_float(PyObject *p);
+void print_python_list(PyObject *p);
+void print_python_bytes(PyObject *p);
+
 /**
  * print_python_list - python lists info
  * @p: the pyobject
