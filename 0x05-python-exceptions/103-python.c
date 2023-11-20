@@ -1,8 +1,8 @@
 #include <Python.h>
 
-void print_python_list(PyObject *p);
 void print_python_bytes(PyObject *p);
 void print_python_float(PyObject *p);
+void print_python_list(PyObject *p);
 
 /**
  * print_python_bytes - Python byte info
@@ -47,7 +47,7 @@ void print_python_float(PyObject *p)
 {
 	char *buff = NULL;
 
-	PyFloatObject *float_obj = (PyFloatObject *)p;
+	PyFloatObject *_float = (PyFloatObject *)p;
 
 	fflush(stdout);
 	printf("[.] float object info\n");
@@ -56,7 +56,7 @@ void print_python_float(PyObject *p)
 		printf("  [ERROR] Invalid Float Object\n");
 		return;
 	}
-	buff = PyOS_double_to_string(float_obj->ob_fval, 'r', 0,
+	buff = PyOS_double_to_string(_float->ob_fval, 'r', 0,
 			Py_DTSF_ADD_DOT_0, NULL);
 	printf("  value: %s\n", buff);
 	PyMem_Free(buff);
