@@ -1,0 +1,38 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation(5)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation("hello! what are you doing guys? I am asking you. huh")
+hello! what are you doing guys?
+<BLANKLINE>
+I am asking you.
+<BLANKLINE>
+huh
+>>> text_indentation("         hello: what up?       hahahah! just checking")
+hello:
+<BLANKLINE>
+what up?
+<BLANKLINE>
+hahahah! just checking
+>>> text_indentation("I                         think this is         working.")
+I                         think this is         working.
+<BLANKLINE>
+>>> text_indentation("            doctest")
+doctest
+>>> text_indentation(".                    this is dot")
+.
+<BLANKLINE>
+this is dot
+>>> text_indentation("")
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation(".             :                ?")
+.
+<BLANKLINE>
+:
+<BLANKLINE>
+?
+<BLANKLINE>
