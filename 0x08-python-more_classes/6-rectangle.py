@@ -15,8 +15,8 @@ class Rectangle:
             initializes the attributes
         '''
         Rectangle.number_of_instances += 1
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
