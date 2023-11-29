@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+'''
+    matrix division module
+'''
+
+
 def matrix_divided(matrix, div):
     '''
     a function that divides all elements of a matrix
@@ -24,8 +29,8 @@ def matrix_divided(matrix, div):
         column = []
         for j in i:
             if not isinstance(j, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) \
-                                of integers/floats")
+                raise TypeError("matrix must be a matrix\
+                                (list of lists) of integers/floats")
             new_value = round(j / div, 2)
             column.append(new_value)
         result.append(column)
