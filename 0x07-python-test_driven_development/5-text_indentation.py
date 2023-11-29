@@ -14,7 +14,7 @@ def text_indentation(text):
     indented_text = ''
     char_coll = ''
     for char in text.strip():
-        if char in ['?',':','.']:
+        if char in ['?', ':', '.']:
             char_coll += char
             char_coll = char_coll.strip()
             indented_text += char_coll + '\n\n'
