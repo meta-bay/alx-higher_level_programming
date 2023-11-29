@@ -12,6 +12,7 @@ def matrix_divided(matrix, div):
         div: the divisor
     Return: a new matrix
     '''
+    pycode = "matrix must be a matrix (list of lists) of integers/floats"
     if not isinstance(matrix, list) or not matrix:
         raise TypeError(
             "matrix must be a matrix (list of lists) of integers/floats")
@@ -29,8 +30,7 @@ def matrix_divided(matrix, div):
         column = []
         for j in i:
             if not isinstance(j, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists)\
-                                 of integers/floats")
+                raise TypeError(pycode)
             new_value = round(j / div, 2)
             column.append(new_value)
         result.append(column)
