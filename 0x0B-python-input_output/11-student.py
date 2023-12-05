@@ -19,3 +19,7 @@ class Student:
         if attrs is None:
             return the_dict
         return {i: the_dict[i] for i in attrs if i in the_dict}
+
+    def reload_from_json(self, json):
+        for i, j in json.items():
+            self.__dict__[i] = json[i]
