@@ -8,6 +8,7 @@ from models.base import Base
 class Rectangle(Base):
     ''' Define a rectangle class'''
     def __init__(self, width, height, x=0, y=0, id=None):
+        ''' initializes the values by checking '''
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width <= 0:
@@ -32,6 +33,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        ''' Returns the width'''
         return self.__width
 
     @width.setter
@@ -44,6 +46,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        ''' Returns the height '''
         return self.__height
 
     @height.setter
@@ -56,6 +59,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        ''' Returns the x value'''
         return self.__x
 
     @x.setter
@@ -68,6 +72,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        ''' Returns the y value'''
         return self.__y
 
     @y.setter
@@ -117,6 +122,7 @@ class Rectangle(Base):
                     self.__y = value
 
     def to_dictionary(self):
+        ''' converts to dictionary '''
         return {
             'x': self.__x,
             'y': self.__y,
