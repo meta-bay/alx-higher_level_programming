@@ -1,20 +1,20 @@
 #!/usr/bin/python3
-"""
-    Test Square
-"""
+'''
+    square testing module
+'''
 import unittest
 from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
-    """ Test square """
+    '''square test class'''
 
     def setUp(self):
-        """ test """
+        '''the setup'''
         Square._Base__nb_objects = 0
 
     def test_sq(self):
-        """ test """
+        '''the setup'''
         s1 = Square(5)
         self.assertEqual(s1.area(), 25)
 

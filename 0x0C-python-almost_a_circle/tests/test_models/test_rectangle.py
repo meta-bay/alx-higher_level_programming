@@ -1,22 +1,20 @@
 #!/usr/bin/python3
-"""
-    Test Rectangle with Unit Test
-"""
-
-
+'''
+    Test the rectangle class
+'''
 import unittest
 from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
-    """ Test Rectangle better tested. """
+    ''' Rectangle class testing class'''
 
     def setUp(self):
-        """ test """
+        ''' Set up'''
         Rectangle._Base__nb_objects = 0
 
     def test_rect(self):
-        """ test """
+        ''' test rectangle'''
         r1 = Rectangle(10, 20)
         self.assertEqual(r1.id, 1)
 
@@ -24,6 +22,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r2.id, 2)
 
     def test_something(self):
+        ''' test something '''
         r3 = Rectangle(1, 2, 3, 4, 5)
         self.assertEqual(r3.id, 5)
 
