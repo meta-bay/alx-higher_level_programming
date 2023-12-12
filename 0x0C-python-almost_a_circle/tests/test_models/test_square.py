@@ -15,8 +15,50 @@ class TestSquare(unittest.TestCase):
 
     def test_sq(self):
         '''the setup'''
-        s1 = Square(5)
-        self.assertEqual(s1.area(), 25)
+    def test_rect(self):
+        ''' test Square'''
+        r1 = Square(1, 2)
+        r2 = Square(1, 2, 4, 5)
+        r3 = Square(2, 1)
+        r4 = Square(5, 6, 8, 9)
+        r5 = Square(2, 1, 1, 1)
+        r6 = Square(3, 4, 5)
+
+        self.assertEqual(r1.id, 1)
+        self.assertEqual(r2.id, 5)
+
+        with self.assertRaises(TypeError):
+            Square("five", 5)
+        with self.assertRaises(TypeError):
+            Square([10], 2)
+        with self.assertRaises(TypeError):
+            Square((1, 2), 5)
+        with self.assertRaises(TypeError):
+            Square(1, 2, [3])
+        with self.assertRaises(TypeError):
+            Square(1, 2, (3, 4))
+        with self.assertRaises(TypeError):
+            Square(1, 2, {})
+        with self.assertRaises(TypeError):
+            Square(1, 2, 3.5)
+        with self.assertRaises(TypeError):
+            Square({}, 5)
+        with self.assertRaises(TypeError):
+            Square(106, '3')
+        with self.assertRaises(TypeError):
+            Square(1, [2])
+        with self.assertRaises(TypeError):
+            Square(1, (2, 3))
+        with self.assertRaises(TypeError):
+            Square(1, {})
+        with self.assertRaises(ValueError):
+            Square(1, -2)
+        with self.assertRaises(ValueError):
+            Square(-1)
+        with self.assertRaises(TypeError):
+            Square(1, 2.5)
+        with self.assertRaises(TypeError):
+            Square(1, 2, '3')
 
     def test_sq1(self):
         ''' a test'''
