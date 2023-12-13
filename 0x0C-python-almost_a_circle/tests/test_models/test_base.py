@@ -4,6 +4,7 @@
 '''
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class TestBase(unittest.TestCase):
@@ -28,7 +29,6 @@ class TestBase(unittest.TestCase):
         ''' test random id'''
         b4 = Base(24)
         self.assertEqual(b4.id, 24)
-
 
 if __name__ == '__main__':
     unittest.main()
