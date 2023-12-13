@@ -74,13 +74,16 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r3.id, 5)
 
     def test_to_json_string_rectangle_type(self):
+        ''' test to json string rectangle type '''
         r = Rectangle(10, 7, 2, 8, 6)
         self.assertEqual(str, type(Base.to_json_string([r.to_dictionary()])))
 
     def test_to_json_string_rect_one_dict(self):
+        ''' test to json string rectangle on dict'''
         r = Rectangle(10, 7, 2, 8, 6)
         self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 53)
     def test_to_json_string_sq_two_dicts(self):
+        ''' test to json string square two dictionaries'''
         s1 = Square(10, 2, 3, 4)
         s2 = Square(4, 5, 21, 2)
         list_dicts = [s1.to_dictionary(), s2.to_dictionary()]
