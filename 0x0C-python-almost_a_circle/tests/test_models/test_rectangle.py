@@ -82,6 +82,7 @@ class TestRectangle(unittest.TestCase):
         ''' test to json string rectangle on dict'''
         r = Rectangle(10, 7, 2, 8, 6)
         self.assertTrue(len(Base.to_json_string([r.to_dictionary()])) == 53)
+
     def test_to_json_string_sq_two_dicts(self):
         ''' test to json string square two dictionaries'''
         s1 = Square(10, 2, 3, 4)
