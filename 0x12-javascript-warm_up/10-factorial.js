@@ -7,4 +7,5 @@ function factorial (num) {
   return (num * factorial(num - 1));
 }
 const num = Number(process.argv[2]);
-console.log(factorial(num));
+const the_factorial = factorial(num);
+console.log(the_factorial);
