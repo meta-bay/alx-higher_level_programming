@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-    sqlalchemy orm
+    MySQLdb connection
 '''
 
 
