@@ -7,8 +7,8 @@ import sys
 
 
 if __name__ == "__main__":
-    url = sys.argv[1]
-    q = sys.argv[2]
+    url = 'http://0.0.0.0:5000/search_user'
+    q = sys.argv[1]
     response = requests.post(url, {'q': q})
     try:
         data = response.json()
