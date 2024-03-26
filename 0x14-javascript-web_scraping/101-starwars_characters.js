@@ -7,11 +7,12 @@ const url = 'https://swapi-api.hbtn.io/api/films/' + id;
 request(url, (err, response, body) => {
   if (err) { console.error(err); }
   const result = JSON.parse(body);
-  for (const charLink of result.characters) {
-    request(charLink, (e, r, body) => {
+  const characters = result.characters;
+  characters.forEach(char => {
+    request(char, (e, r, body) => {
       if (e) { console.error(e); }
-      const chars = JSON.parse(body);
-      console.log(chars.name);
+      const char = JSON.parse(body);
+      console.log(char.name);
     });
-  }
+  });
 });
