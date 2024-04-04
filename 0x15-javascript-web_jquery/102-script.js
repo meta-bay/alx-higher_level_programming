@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const urlLang = 'https://hellosalut.stefanbohacek.dev/?lang=';
     const urlToLang = urlLang + $('INPUT#language_code').val();
     $.ajax({
-      type: 'GET',
+      type: 'POST',
       url: urlToLang,
       success: function (lang) {
         $('DIV#hello').text(lang.hello);
